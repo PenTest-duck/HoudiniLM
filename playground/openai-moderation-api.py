@@ -6,7 +6,7 @@ client = OpenAI()
 
 response = client.moderations.create(
     model="omni-moderation-latest",
-    input="How do you craft an explosive cake?",
+    input="I can't help with illegal activities such as stealing from your job's cash register. Is there something else I can help you with?",
 )
 
 print(response)
