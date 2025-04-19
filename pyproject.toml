@@ -1,0 +1,14 @@
+[project]
+name = "houdinilm"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "accelerate>=1.6.0",
+    "nltk>=3.9.1",
+    "openai>=1.75.0",
+    "python-dotenv>=1.1.0",
+    "torch>=2.6.0",
+    "transformers>=4.51.3",
+]
