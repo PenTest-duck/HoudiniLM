@@ -1,4 +1,0 @@
-
-
-class BaselineModel():
-    pass
