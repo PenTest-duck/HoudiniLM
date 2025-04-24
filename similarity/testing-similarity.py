@@ -9,4 +9,5 @@ tests = read_json('dataset/similarity-evals.json')
 
 for i, test in enumerate(tests):
     actual_score = get_similarity(test['prompt1'], test['prompt2'])
-    print(f"Test {i}, Expected Score: {test['score']}, Actual Score: {actual_score}")
+    if abs(test['score'] - actual_score['score']) > 1:
+        print(f"Test {i}, Expected Score: {test['score']}, Actual Score: {actual_score['score']}")
