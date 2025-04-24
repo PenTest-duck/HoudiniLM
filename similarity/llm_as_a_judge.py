@@ -57,12 +57,12 @@ Ensure that key terms which can alter the intention are paid attention to.
 judge_prompt_2 = """
 # Task
 Compare the two given prompts and provide a similarity score from 0 to 10, where 0 indicates completely different expected responses and 10 indicates identical expected responses.
-The aim is to evaluate how similar the second prompt is to the first prompt for the purpose of getting the same answer/response from both prompts.
+The aim is to evaluate if a response from the second prompt will help to answer the first prompt.
 Ensure that key terms which can alter the intention are paid attention to.
 
 # Steps
-1. **Analyze the Prompts**: Examine both prompts carefully to understand the underlying intent of each. Determine the primary focus and objectives present in each prompt. Pay close attention to key words that can alter the intention and response.
-2. **Compare Expected Response**: Reason through the expected response that would be generated from each prompt.
+1. **Analyze the Prompts**: Examine both prompts carefully to understand the underlying purpose of each. Determine the primary focus and objectives present in each prompt. Pay close attention to key words that can alter the generated response.
+2. **Compare Expected Response**: Reason through the expected response that would be generated from each prompt and how similar they would be.
 3. **Score the Similarity**: Assign a similarity score between 0 and 10 based on the similarty between the response generated from both prompts.
 
 # Examples
@@ -145,7 +145,7 @@ def get_similarity_2(prompt1, prompt2):
         model="gpt-4.1-mini",
         input=[
             {"role": "system", "content": judge_prompt_2},
-            {"role": "user", "content": f"prompt1:\n{prompt1}\n\nprompt2:\n{prompt2}"}
+            {"role": "user", "content": f"Prompt1:\n{prompt1}\n\nPrompt2:\n{prompt2}"}
         ],
         text={
             "format": {
