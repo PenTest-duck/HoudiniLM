@@ -1,5 +1,10 @@
-# HoudiniLM
-Next-Gen Adversarial Prompt Generation with RL
+# HoudiniLM - Next-Gen Adversarial Prompt Generation with RL
+
+**Team Name**: How To Rob A Bank
+
+**Project Title**: HoudiniLM - Next-Gen Adversarial Prompt Generation with RL
+
+**Team members**: Chris Yoo (z5589635), Rahul Markasserithodi (z), Ishmanbir Singh (z), Alan Niu (z)
 
 ## Installation
 0. You must have Python 3.13 installed.
