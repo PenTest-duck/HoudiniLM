@@ -5,7 +5,7 @@ import nltk
 import re
 from nltk.corpus import wordnet
 from constants import BASELINE_ADVERSARIAL_PREFIX, BASELINE_ADVERSARIAL_SUFFIX
-from model import HoudiniLM
+from .model import HoudiniLM
 
 """
 The baseline model is a rule-based model 
