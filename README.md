@@ -4,7 +4,7 @@
 
 **Project Title**: HoudiniLM - Next-Gen Adversarial Prompt Generation with RL
 
-**Team members**: Chris Yoo (z5589635), Rahul Markasserithodi (z), Ishmanbir Singh (z), Alan Niu (z)
+**Team members**: Chris Yoo (z5589635), Rahul Markasserithodi (z5456750), Ishmanbir Singh (z5480281), Alan Niu (z5604369)
 
 ## Installation
 0. You must have Python 3.13 installed.
