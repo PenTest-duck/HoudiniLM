@@ -10,6 +10,7 @@ dependencies = [
     "nltk>=3.9.1",
     "openai>=1.75.0",
     "python-dotenv>=1.1.0",
+    "scikit-learn>=1.6.1",
     "strong-reject",
     "torch>=2.6.0",
     "tqdm>=4.67.1",

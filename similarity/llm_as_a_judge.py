@@ -153,18 +153,12 @@ def get_similarity_2(prompt1, prompt2):
                 "name": "similarity_score",
                 "schema": {
                     "type": "object",
-                    "properties": {
-                        "step 1": {
-                            "type": "string"
-                        },
-                        "step 2": {
-                            "type": "string"
-                        },                                 
+                    "properties": {                              
                         "score": {
                             "type": "integer"
                         },
                     },
-                    "required": ["step 1", "step 2", "score"],
+                    "required": ["score"],
                     "additionalProperties": False
                 },
                 "strict": True
