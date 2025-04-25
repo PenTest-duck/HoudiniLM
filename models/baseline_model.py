@@ -17,6 +17,9 @@ class BaselineModel(HoudiniLM):
             # Skip the first line (header)
             self.bad_words = f.read().splitlines()[1:]
 
+    def get_name(self) -> str:
+        return "baseline"
+
     def generate(self, original_prompt: str) -> str:
         """
         Generate an improved adversarial prompt
