@@ -20,7 +20,7 @@ def evaluate_reward_func():
         scores.append(reward_score)
         
         # Calculate ground truth (average of score1 and score2)
-        ground_truth = row[""]
+        ground_truth = row["avg_normalised"]
         ground_truth_scores.append(ground_truth)
 
         results = {
