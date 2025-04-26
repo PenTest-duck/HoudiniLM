@@ -142,7 +142,7 @@ def get_similarity_1(prompt1, prompt2):
 
 def get_similarity_2(prompt1, prompt2):
     response = client.responses.create(
-        model="gpt-4.1-mini",
+        model="gpt-4.1",
         input=[
             {"role": "system", "content": judge_prompt_2},
             {"role": "user", "content": f"Prompt1:\n{prompt1}\n\nPrompt2:\n{prompt2}"}
@@ -153,7 +153,7 @@ def get_similarity_2(prompt1, prompt2):
                 "name": "similarity_score",
                 "schema": {
                     "type": "object",
-                    "properties": {                              
+                    "properties": {  
                         "score": {
                             "type": "integer"
                         },
