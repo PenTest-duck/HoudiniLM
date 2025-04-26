@@ -16,7 +16,12 @@ def evaluate_reward_func():
         response = row['response']
         
         # Calculate reward using our function
-        reward_score = strongreject_rubric(prompt, [response])
+        while True:
+            try:
+                reward_score = strongreject_rubric(prompt, [response])
+                break
+            except Exception as e:
+                print(f"Error in Strong Reject: {e}")
         scores.append(reward_score)
         
         # Calculate ground truth (average of score1 and score2)
@@ -29,12 +34,13 @@ def evaluate_reward_func():
             'predicted_score': reward_score,
             'ground_truth': ground_truth
         }
-
-        print(results)
+        
+        if abs(reward_score - ground_truth) > 0.2:
+            print(results)
 
         results_df = results_df._append(results, ignore_index=True)
     
-    results_df.to_csv("reward_functions/reward_func_results.csv", index=False)
+    results_df.to_csv("reward_func_results.csv", index=False)
 
     # Calculate correlation and other metrics
     correlation = results_df['predicted_score'].corr(results_df['ground_truth'])
