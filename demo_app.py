@@ -22,7 +22,7 @@ demo = gr.Interface(
     inputs=gr.Textbox(label="Prompt"),
     outputs=[
         gr.Textbox(label="No Model"),
-        gr.Textbox(label="Baseline Model")
+        gr.Textbox(label="Baseline Model"),
     ],
     title="HoudiniLM Demo"
 )

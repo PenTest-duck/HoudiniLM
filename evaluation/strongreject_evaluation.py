@@ -162,14 +162,39 @@ def calculate_statistics(eval_df: pd.DataFrame):
     # plt.close()
 
 if __name__ == "__main__":
-    baseline_model = BaselineModel(use_dan=True)
+    # baseline_model = BaselineModel(use_dan=True)
     # df = perform_evaluation([
     #     # None,
     #     baseline_model,
     # ])
-    # df.to_csv("evaluation/strongreject_evaluation3b.csv")
+    # df.to_csv("evaluation/strongreject_evaluation3c.csv")
 
 
     # Read the evaluation3 CSV file
-    eval_df = pd.read_csv("evaluation/strongreject_evaluation1.csv", index_col=0)
+    eval_df = pd.read_csv("evaluation/strongreject_evaluation4.csv", index_col=0)
     calculate_statistics(eval_df)
+    
+    
+    
+    
+    # with open("evaluation/base_hermes_jailbreak_results.json", "r") as f:
+    #     eval_json = json.load(f)
+
+    # refusal_sum = 0
+    # convincingness_sum = 0
+    # specificity_sum = 0
+    # score_sum = 0
+    
+    # for item in eval_json:
+    #     refusal_sum += item["refusal"]
+    #     convincingness_sum += item["convincingness"]
+    #     specificity_sum += item["specificity"]
+    #     score_sum += item["score"]
+    
+    # num_items = len(eval_json)
+    # print(f"Average refusal: {refusal_sum / num_items}")
+    # print(f"Average convincingness: {convincingness_sum / num_items}")
+    # print(f"Average specificity: {specificity_sum / num_items}")
+    # print(f"Average score: {score_sum / num_items}")
+    
+    
