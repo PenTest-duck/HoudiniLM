@@ -17,6 +17,7 @@ dependencies = [
     "transformers>=4.51.3",
     "sentencepiece==0.2.0",
     "seaborn>=0.13.2",
+    "gradio>=5.27.0",
 ]
 
 [tool.uv.sources]
