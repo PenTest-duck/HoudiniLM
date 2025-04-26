@@ -5,17 +5,21 @@ import nltk
 import re
 from nltk.corpus import wordnet
 from constants import BASELINE_ADVERSARIAL_PREFIX, BASELINE_ADVERSARIAL_SUFFIX
-from model import HoudiniLM
+from .model import HoudiniLM
 
 """
 The baseline model is a rule-based model 
 """
 class BaselineModel(HoudiniLM):
-    def __init__(self):
+    def __init__(self, use_dan: bool = False):
+        self.use_dan = use_dan
         nltk.download("wordnet")
         with open("dataset/bad_words.txt", "r") as f:
             # Skip the first line (header)
             self.bad_words = f.read().splitlines()[1:]
+
+    def get_name(self) -> str:
+        return "baseline_dan" if self.use_dan else "baseline" 
 
     def generate(self, original_prompt: str) -> str:
         """
@@ -35,13 +39,18 @@ class BaselineModel(HoudiniLM):
                     continue
             improved_prompt_fragments.append(fragment)
 
-        improved_prompt = dedent(f"""
-            {BASELINE_ADVERSARIAL_PREFIX}
-            <prompt>
-            {"".join(improved_prompt_fragments)}
-            </prompt>
-            {BASELINE_ADVERSARIAL_SUFFIX}
-        """)
+        if self.use_dan:
+            improved_prompt = dedent(f"""
+                {BASELINE_ADVERSARIAL_PREFIX}
+                
+                <prompt>
+                {"".join(improved_prompt_fragments)}
+                </prompt>
+                
+                {BASELINE_ADVERSARIAL_SUFFIX}
+            """)
+        else:
+            improved_prompt = "".join(improved_prompt_fragments)
         return improved_prompt
 
 

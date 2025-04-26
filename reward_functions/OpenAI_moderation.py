@@ -3,7 +3,6 @@ from openai import OpenAI
 client = OpenAI()
 
 def safety_score(text):
-
     response = client.moderations.create(
         model="omni-moderation-latest",
         input=text,
