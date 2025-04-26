@@ -146,20 +146,20 @@ def calculate_statistics(eval_df: pd.DataFrame):
     grouped_stats = eval_df.groupby(['model', 'dataset'])[score_columns].mean()
     print(grouped_stats)
 
-    # Visualize the results
-    plt.figure(figsize=(12, 8))
-    sns.boxplot(data=eval_df, x='model', y='strongreject_score', hue='dataset')
-    plt.title('Distribution of Strongreject Scores by Model and Dataset')
-    plt.savefig('evaluation/strongreject_scores_boxplot.png')
-    plt.close()
+    # # Visualize the results
+    # plt.figure(figsize=(12, 8))
+    # sns.boxplot(data=eval_df, x='model', y='strongreject_score', hue='dataset')
+    # plt.title('Distribution of Strongreject Scores by Model and Dataset')
+    # plt.savefig('evaluation/strongreject_scores_boxplot.png')
+    # plt.close()
 
-    # Correlation matrix between metrics
-    plt.figure(figsize=(10, 8))
-    correlation = eval_df[score_columns].corr()
-    sns.heatmap(correlation, annot=True, cmap='coolwarm')
-    plt.title('Correlation Between Strongreject Metrics')
-    plt.savefig('evaluation/strongreject_correlation.png')
-    plt.close()
+    # # Correlation matrix between metrics
+    # plt.figure(figsize=(10, 8))
+    # correlation = eval_df[score_columns].corr()
+    # sns.heatmap(correlation, annot=True, cmap='coolwarm')
+    # plt.title('Correlation Between Strongreject Metrics')
+    # plt.savefig('evaluation/strongreject_correlation.png')
+    # plt.close()
 
 if __name__ == "__main__":
     baseline_model = BaselineModel(use_dan=True)
@@ -171,5 +171,5 @@ if __name__ == "__main__":
 
 
     # Read the evaluation3 CSV file
-    eval_df = pd.read_csv("evaluation/strongreject_evaluation3b.csv", index_col=0)
+    eval_df = pd.read_csv("evaluation/strongreject_evaluation1.csv", index_col=0)
     calculate_statistics(eval_df)
