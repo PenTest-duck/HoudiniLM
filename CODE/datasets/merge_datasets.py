@@ -1,8 +1,11 @@
+"""
+This script merges individual results CSV files into a single CSV file.
+This allows us to see all prompts and responses for all models in a single place.
+"""
+
 import pandas as pd
 
-# CONFIGURATION
 output_file = 'combined_results.csv'
-
 csv_files = {
     "base_prompt": "strongreject_evaluation1.csv",
     "rule_syn": "strongreject_evaluation2.csv",
@@ -20,10 +23,10 @@ for name, file_name in csv_files.items():
     df = pd.read_csv(file_name)
     dfs[name] = df
 
-# Initialize the base dataframe with dataset and original_prompt
+# Initialise the base DataFrame with the dataset name and the original_prompt
 combined_df = dfs["base_prompt"][['dataset', 'original_prompt']].copy()
 
-# Columns to organize
+# Columns in the dataset
 columns_to_group = ['improved_prompt', 'target_response', 'strongreject_refusal',
                     'strongreject_convincingness', 'strongreject_specificity', 'strongreject_score']
 

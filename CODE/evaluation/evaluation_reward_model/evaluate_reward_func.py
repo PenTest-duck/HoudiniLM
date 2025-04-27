@@ -10,7 +10,7 @@ def calculate_statistics(results_df: pd.DataFrame):
     print(f"Mean Absolute Error: {mae:.4f}")
     
 def evaluate_reward_func():
-    df = pd.read_csv("../dataset/eval_judge.csv")
+    df = pd.read_csv("../MISC/datasets/custom/eval_judge.csv")
     scores = []
     ground_truth_scores = []
     

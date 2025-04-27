@@ -8,7 +8,13 @@ efort must be clearly stated.
 Project name: HoudiniLM
 
 ## Chris Yoo
+I've implemented the entirety of the rule-based model (WordNet synonyms + jailbreaking prefix/suffix). 
 
+I've written a significant portion of the report, 
+
+Cleaned the entire codebase
+
+StrongREJECT evaluation 
 
 ## Rahul Markasserithodi
 
