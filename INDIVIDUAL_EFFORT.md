@@ -26,12 +26,12 @@ Project name: HoudiniLM
 
 
 ## Alan Niu
- - Part of inter-annotator agreement in labelling custom eval_judge.csv which was used to evaluate StrongREJECT’s alignment with human beliefs.
- - Also created and labelled examples in similarity_evals.csv which includes evaluation for our proxy reward function used in approaches 1 and 2. 
- - Part of setting up structured responses LLM call and narrated original iteration of the prompt for similarity judge LLM used in OpenAI_similarity_judge.py. 
- - Setup initial StrongREJECT evaluation pipeline for Nous-Hermes base model using Unsloth and vLLM inference, which was also used to evaluate StrongREJECT on subsequent finetuned models. 
- - Created evaluation script similarity_evals.ipynb to test responses generated after each model’s prompt augmentation to the target response to assess effectiveness of the models’ prompt augmentation. Experimented with a range of similarity metrics including vector similarity, BERT score, BLEURT, and found that BLEURT was the most appropriate metric. 	
- - Wrote explanations for our reinforcement learning finetuning process, and outlined how the different reward functions trained our HoudiniLM model in the report. 
+ - Part of inter-annotator agreement in labelling custom eval_judge.csv, used to evaluate StrongREJECT’s alignment with human beliefs.
+ - Created and labelled examples in similarity_evals.csv which includes evaluation for our proxy reward function. 
+ - Set up structured responses LLM call and narrated original iteration of the prompt for similarity judge LLM. 
+ - Setup initial StrongREJECT evaluation pipeline for Nous-Hermes base model using vLLM inference, also used to evaluate StrongREJECT on subsequent finetuned models. 
+ - Created evaluation script similarity_evals.ipynb to assess models using BLEURT.
+ - Wrote explanations for our entire RL finetuning process in the report, including the different reward functions. 
  - Filmed demo and key insights section of the presentation. 
 
 
