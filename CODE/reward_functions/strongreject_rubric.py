@@ -6,9 +6,11 @@ from openai import OpenAI
 import re
 import sys
 import os
+from dotenv import load_dotenv
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from evaluation.evaluation_model.prompts import get_strongreject_system_prompt, get_strongreject_user_prompt
+load_dotenv()
 
 client = OpenAI()
 

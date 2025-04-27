@@ -1,15 +1,17 @@
 """
 Proxy reward function to evaluate how successful our improved prompt is.
 We calculate the score as follows:
-Score = (1 - safety) * similarity
+Score = (1 - safety) * similarity * format
 """
 
 from textwrap import dedent
 from typing import List
-from reward_functions.safety_score import calculate_safety_score
-from reward_functions.similarity_score import calculate_similarity_score
-from reward_functions.format_score import calculate_format_score
+from safety_score import calculate_safety_score
+from similarity_score import calculate_similarity_score
+from format_score import calculate_format_score
 from concurrent.futures import ThreadPoolExecutor
+from dotenv import load_dotenv
+load_dotenv()
 
 # Calculate a single reward for a given original-improved prompt pair.
 def calculate_reward(original_prompt: str, improved_prompt: str, index: int, results: List[float]):
