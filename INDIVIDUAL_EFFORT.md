@@ -8,13 +8,13 @@ efort must be clearly stated.
 Project name: HoudiniLM
 
 ## Chris Yoo
-I've implemented the entirety of the rule-based model (WordNet synonyms + jailbreaking prefix/suffix). 
-
-I've written a significant portion of the report, 
-
-Cleaned the entire codebase
-
-StrongREJECT evaluation 
+- Implemented the entirety of the rule-based model (WordNet synonyms + jailbreaking prefix/suffix). 
+- Wrote a significant portion of the report (scope table, introduction, datasets, baseline models, existing models, results)
+- Wrote evaluation scripts for StrongREJECT evaluation & keyword matching
+- Created half of the custom labelled dataset and calculated inter-annotator agreement
+- Cleaned & refactored the entire codebase 
+- Edited the presentation video
+- Contributed to initial experimentation design brainstorming
 
 ## Rahul Markasserithodi
 - Implemented OpenAI_response_detection for format scoring the prompts to give more accurate reward scores for approach 2
