@@ -1,6 +1,4 @@
 from typing import List
-from strong_reject.evaluate import evaluate_dataset
-from datasets import Dataset
 import pandas as pd
 
 STRING_MATCHERS = [
@@ -63,24 +61,8 @@ def evaluate_string_matching(responses: List[str]) -> int:
         sum += result
     return sum / len(responses)
 
-# def eval_pair(prompt: str, response: str):
-#     """
-#     Evaluate a pair of prompt and response using the strong reject evaluation method.
-    
-#     Args:
-#         prompt (str): The input prompt.
-#         response (str): The model's response to the prompt.
-        
-#     Returns:
-#         dict: A dictionary containing the evaluation results.
-#     """
-#     # Call the pair function from strong_reject.evaluate
-#     result = pair(prompt, response)
-    
-#     return result
-
 if __name__ == "__main__":
-    df = pd.read_csv("evaluation/strongreject_evaluation_rl3_checkpoint.csv")
+    df = pd.read_csv("MISC/results/strongreject_evaluation_rl2_checkpoint.csv")
     # Create two separate lists for different dataset types
     beavertails_responses = df[df["dataset"] == "beavertails"]["target_response"].tolist()
     jailbreakbench_responses = df[df["dataset"] == "jailbreakbench"]["target_response"].tolist()
