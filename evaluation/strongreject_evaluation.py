@@ -167,11 +167,11 @@ if __name__ == "__main__":
     #     # None,
     #     baseline_model,
     # ])
-    # df.to_csv("evaluation/strongreject_evaluation3c.csv")
+    # df.to_csv("evaluation/strongreject_evaluation_nous.csv")
 
 
     # Read the evaluation3 CSV file
-    eval_df = pd.read_csv("evaluation/strongreject_evaluation5.csv", index_col=0)
+    eval_df = pd.read_csv("evaluation/strongreject_evaluation_nous.csv", index_col=0)
     calculate_statistics(eval_df)
     
     
