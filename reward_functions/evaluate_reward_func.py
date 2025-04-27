@@ -28,7 +28,7 @@ def evaluate_reward_func():
                 reward_score = strongreject_rubric(prompt, [response])
                 break
             except Exception as e:
-                print(f"Error in Strong Reject: {e}")
+                print(f"Error in StrongREJECT: {e}")
         scores.append(reward_score)
         
         # Calculate ground truth (average of score1 and score2)
@@ -52,6 +52,5 @@ def evaluate_reward_func():
 
 
 if __name__ == "__main__":
-    # evaluate_reward_func()
-    df = pd.read_csv("reward_func_results.csv")
-    calculate_statistics(df)
+    evaluate_reward_func()
+

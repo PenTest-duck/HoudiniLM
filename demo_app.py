@@ -1,5 +1,5 @@
 import gradio as gr
-from models.baseline_model import BaselineModel
+from CODE.models.baseline_model import BaselineModel
 
 # Initialize models
 baseline_model_syn = BaselineModel(use_dan=False)
