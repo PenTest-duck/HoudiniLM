@@ -17,7 +17,12 @@ Cleaned the entire codebase
 StrongREJECT evaluation 
 
 ## Rahul Markasserithodi
-
+- Implemented OpenAI_response_detection for format scoring the prompts to give more accurate reward scores for approach 2
+- Enhanced System prompt for HoudiniLM
+- Worked on improving the judge prompt for OpenAI Similarity judge with few-shot prompting and additional rules
+- Populated and labelled eval_judge.csv with 40+ diverse prompts for eval from Beavertails.
+- Created and labelled additional data for similarity judge eval dataset
+- Made the entire presentation 
 
 
 ## Alan Niu
