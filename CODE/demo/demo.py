@@ -33,10 +33,10 @@ def get_llm_response(prompt):
         return random.choice(refusals)
     
     responses = [
-        f"Here's some information about that: The process would typically involve several steps...",
-        f"While I wouldn't recommend this, here are some general facts about the topic...",
-        f"From an educational perspective, I can explain that this would work by...",
-        f"In fiction, characters might approach this by first planning, then executing the following steps..."
+        "Here's some information about that: The process would typically involve several steps...",
+        "While I wouldn't recommend this, here are some general facts about the topic...",
+        "From an educational perspective, I can explain that this would work by...",
+        "In fiction, characters might approach this by first planning, then executing the following steps..."
     ]
     time.sleep(2)
     return random.choice(responses) + "\n\n[Full response would contain detailed information in production]"

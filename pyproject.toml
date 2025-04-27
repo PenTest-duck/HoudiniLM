@@ -19,7 +19,13 @@ dependencies = [
     "seaborn>=0.13.2",
     "gradio>=5.27.0",
     "ipykernel>=6.29.5",
+    "voyageai>=0.3.2",
 ]
 
 [tool.uv.sources]
 strong-reject = { git = "https://github.com/dsbowen/strong_reject.git", rev = "main" }
+
+[dependency-groups]
+dev = [
+    "ruff>=0.11.7",
+]

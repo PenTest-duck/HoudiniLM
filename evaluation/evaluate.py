@@ -1,6 +1,5 @@
 import re
 import openai
-import requests
 import os
 from datasets import Dataset
 from dotenv import load_dotenv

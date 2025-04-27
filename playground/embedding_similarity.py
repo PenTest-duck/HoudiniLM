@@ -1,7 +1,7 @@
 import voyageai
+import numpy as np
 from dotenv import load_dotenv
 load_dotenv()
-import numpy as np
 
 def cosine_similarity(vec1, vec2):
     vec1 = np.array(vec1)
