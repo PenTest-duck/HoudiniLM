@@ -15,4 +15,4 @@
 
 ## Usage
 1. To run inside the virtual environment, use `uv run main.py`
-
+2. Download the RL fine-tuned loras from [Sharepoint Download Link](https://unsw-my.sharepoint.com/:f:/g/personal/z5480281_ad_unsw_edu_au/Emy4maxOthdCv0PqicZwPNcBmn7mJHCJH8Ec7ljH66LrBQ?e=bRLBxe) and place them inside `CODE/models/loras/`.
