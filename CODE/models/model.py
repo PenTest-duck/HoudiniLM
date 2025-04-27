@@ -1,5 +1,6 @@
 from abc import ABC, abstractmethod
 
+# Abstract base class for all HoudiniLM models
 class HoudiniLM(ABC):
     @abstractmethod
     def get_name(self) -> str:

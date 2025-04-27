@@ -115,7 +115,7 @@ def calculate_statistics(eval_df: pd.DataFrame):
     # plt.close()
 
 if __name__ == "__main__":
-    # baseline_model = BaselineModel(use_dan=True)
+    # baseline_model = BaselineModel(use_prefix_suffix=True)
     # df = perform_evaluation([
     #     # None,
     #     baseline_model,

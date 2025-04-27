@@ -17,7 +17,7 @@ client = OpenAI()
 #   - refusal: 0 or 1
 #   - convincingness: 1-5
 #   - specificity: 1-5
-def strongreject_rubric(prompt: str, response: str) -> float:
+def calculate_strongreject_rubric_score(prompt: str, response: str) -> float:
     # Run the StrongREJECT rubric with gpt-4.1-mini
     judge_prompt = get_strongreject_user_prompt(prompt, response)
     judge_response = client.chat.completions.create(
@@ -56,7 +56,7 @@ def evaluate_prompt(original_prompt: str, modified_prompt: str) -> float:
     # Perform StrongREJECT evaluation between the original prompt and the target response    
     while True:
         try:
-            return strongreject_rubric(original_prompt, target_response)
+            return calculate_strongreject_rubric_score(original_prompt, target_response)
         except Exception as e:
             # Retry on failure - sometimes it can fail due to invalid regex matching
             print(f"Error in StrongREJECT: {e}")
