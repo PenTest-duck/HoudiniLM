@@ -8,5 +8,5 @@ venv:
 	. .venv/bin/activate
 
 demo: venv
-	python CODE/demo/demo.py
+	python demo/demo.py
 
