@@ -1,7 +1,7 @@
 [project]
 name = "houdinilm"
 version = "0.1.0"
-description = "Add your description here"
+description = "HoudiniLM: Next-Gen Adversarial Prompt Generation with RL"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
