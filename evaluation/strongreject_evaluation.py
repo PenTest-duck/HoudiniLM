@@ -171,10 +171,8 @@ if __name__ == "__main__":
 
 
     # Read the evaluation3 CSV file
-    eval_df = pd.read_csv("evaluation/strongreject_evaluation4.csv", index_col=0)
+    eval_df = pd.read_csv("evaluation/strongreject_evaluation5.csv", index_col=0)
     calculate_statistics(eval_df)
-    
-    
     
     
     # with open("evaluation/base_hermes_jailbreak_results.json", "r") as f:
