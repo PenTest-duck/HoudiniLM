@@ -171,7 +171,7 @@ if __name__ == "__main__":
 
 
     # Read the evaluation3 CSV file
-    eval_df = pd.read_csv("evaluation/strongreject_evaluation_rl3.csv", index_col=0)
+    eval_df = pd.read_csv("evaluation/strongreject_evaluation_rl3_checkpoint.csv", index_col=0)
     calculate_statistics(eval_df)
     
     
