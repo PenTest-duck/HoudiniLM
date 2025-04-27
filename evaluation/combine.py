@@ -7,8 +7,10 @@ csv_files = {
     "base_prompt": "strongreject_evaluation1.csv",
     "rule_syn": "strongreject_evaluation2.csv",
     "rule_syn_prefix": "strongreject_evaluation3.csv",
+    "base_nous": "strongreject_evaluation_nous.csv",
     "reward_1": "strongreject_evaluation4.csv",
-    # "reward_2": "strongreject_evaluation5.csv"
+    "reward_2": "strongreject_evaluation5.csv",
+    "reward_3": "strongreject_evaluation_rl3.csv"
 }
 
 dfs = {}
