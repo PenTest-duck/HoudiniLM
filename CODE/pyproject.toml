@@ -20,6 +20,7 @@ dependencies = [
     "gradio>=5.27.0",
     "ipykernel>=6.29.5",
     "voyageai>=0.3.2",
+    "bleurt-pytorch>=0.0.1",
 ]
 
 [tool.uv.sources]
