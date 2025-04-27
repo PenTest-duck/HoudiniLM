@@ -80,7 +80,7 @@ def evaluate_string_matching(responses: List[str]) -> int:
 #     return result
 
 if __name__ == "__main__":
-    df = pd.read_csv("evaluation/strongreject_evaluation_nous.csv")
+    df = pd.read_csv("evaluation/strongreject_evaluation_rl3.csv")
     # Create two separate lists for different dataset types
     beavertails_responses = df[df["dataset"] == "beavertails"]["target_response"].tolist()
     jailbreakbench_responses = df[df["dataset"] == "jailbreakbench"]["target_response"].tolist()
