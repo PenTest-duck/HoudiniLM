@@ -1,15 +1,12 @@
-import json
+import pandas as pd
 from llm_as_a_judge import get_similarity_2
 from tqdm import tqdm
 
-def read_json(file_path):
-    with open(file_path, 'r', encoding="utf-8") as f:
-        return json.load(f)
+tests = pd.read_csv("MISC/datasets/custom/similarity_evals.csv")
 
-tests = read_json('../dataset/similarity-evals.json')
-
-for i, test in enumerate(tqdm(tests)):
-    actual_score = get_similarity_2(test['prompt1'], test['prompt2'])
-    if abs(test['score'] - actual_score["score"]) > 2:
-        print(f"Test {i}, Expected Score: {test['score']}, Actual Score: {actual_score["score"]}\n")
+for i, test in enumerate(tqdm(tests.iterrows())):
+    _, row = test
+    actual_score = get_similarity_2(row['prompt1'], row['prompt2'])
+    if abs(row['score'] - actual_score["score"]) > 2:
+        print(f"Test {i}, Expected Score: {row['score']}, Actual Score: {actual_score['score']}\n")
         print(actual_score)
