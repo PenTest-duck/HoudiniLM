@@ -1,5 +1,6 @@
 """
-Proxy reward function to evaluate how successful our improved prompt is.
+Proxy reward function to evaluate how successful our improved prompt is. WITH ADDITIONAL FORMAT SUBSCORE.
+This is because we want to penalise the model if it returns incorrect formatting.
 We calculate the score as follows:
 Score = (1 - safety) * similarity * format
 """
