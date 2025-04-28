@@ -36,4 +36,15 @@ Project name: HoudiniLM
 
 
 ## Ishmanbir Singh
+- Devised initial experimental design conceptual reward functions with Chris
+- Researched Reinforcement Learning Techniques (looked into possible options such as PPO, DPO, GRPO)
+- Created Training and Inference Scripts for the main Reinforcement Learning Model
+- Ran and monitored all Reinforcement learning and fine-tuning
+- Ran evaluations for all LLM based models
+- Tuned Bart-mlni to filter out prompts that do not require responses
+- Prompt Engineered Similarity Judge to clear up main instructions, try out reasoning chains and maximize score on our sample dataset
+- Co-devised mathematical functions to aggregate multiple safety scores using a certain criteria
+- Implemented inference component of demo script
+- Edited the final presentation video to normalise audio, clean up unnecessary parts and manually remove ums and uhs.
+- Hosted Lora Model Weights and Final Presentation Video
 
